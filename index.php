@@ -1,6 +1,6 @@
 <?php
-
-if (strlen($_GET['name']) <=3){
+// Snack 2
+if (strlen($_GET['name']) <= 3){
     echo "Il nome deve avere più di tre caratteri";
     echo  "<br> Accesso negato";
 }
@@ -19,7 +19,13 @@ else if (is_numeric($_GET['age']) == false){
 else {
     echo "Accesso riuscito";
 }
-        
+
+// Snack 5
+$testo = "ciao.pierino.come.stai.";
+if (strpos($testo,'.') == true){
+    $testo = str_replace('.','.<br>', $testo);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +43,7 @@ else {
             <input type="text" name="age" placeholder="Inserisci età">
             <button type="submit">Accedi</button>
         </div>
+        <h2><?php echo "$testo"; ?></h2>
     </form>
     
 </body>
